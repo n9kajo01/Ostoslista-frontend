@@ -5,7 +5,6 @@ function App() {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [items, setItems] = useState([]);
-  const [warning, setWarning] = useState("")
 
   const URL = "http://localhost/shoppinglist/";
 
@@ -67,9 +66,9 @@ function App() {
       .then(
         (response) => {
           if (status === 200) {
-            setItems(items => [items, response]);
-            setDescription("");
-            setAmount("");
+            //setItems(items => [items, response]);
+            //setDescription("");
+            //setAmount("");
           } else {
             alert(response.error);
           }
@@ -133,7 +132,6 @@ function App() {
           ></input>
           <button>Add</button>
         </label>
-        <output>{warning}</output>
       </form>
 
 
